@@ -30,4 +30,8 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
 
   // Calculate Gross Profit Margin
   const grossProfitMargin = revenue > 0 ? (salesTotal / revenue) * 100 : 0
+
+  // Calculate Net Profit Margin
+  const netProfitMargin =
+    revenue > 0 ? ((revenue - expenses) / revenue) * 100 : 0
 })
