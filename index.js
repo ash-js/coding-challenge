@@ -19,4 +19,15 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
   const expenses = accounts
     .filter((account) => account.account_category === 'expense')
     .reduce((sum, account) => sum + account.total_value, 0)
+
+  // Calculate sales_total for Gross Profit Margin
+  const salesTotal = accounts
+    .filter(
+      (account) =>
+        account.account_type === 'sales' && account.value_type === 'debit'
+    )
+    .reduce((sum, account) => sum + account.total_value, 0)
+
+  // Calculate Gross Profit Margin
+  const grossProfitMargin = revenue > 0 ? (salesTotal / revenue) * 100 : 0
 })
