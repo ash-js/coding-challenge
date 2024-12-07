@@ -1,3 +1,17 @@
+/**
+ * Code to calculate Gross Profit Margin, Net Profit Margin, and Working Capital Ratio in JavaScript
+ * This script reads financial data from a JSON file (data.json) and calculates:
+ * - Revenue
+ * - Expenses
+ * - Gross Profit Margin
+ * - Net Profit Margin
+ * - Working Capital Ratio
+ *
+ * Usage:
+ * 1. Ensure the data.json file is in the same directory as this script.
+ * 2. Run the script using Node.js: `node index.js`.
+ * 3. The results will be printed to the console in the specified format.
+ */
 const fs = require('fs')
 
 // Read data from data.json
