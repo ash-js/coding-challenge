@@ -14,4 +14,9 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
   const revenue = accounts
     .filter((account) => account.account_category === 'revenue')
     .reduce((sum, account) => sum + account.total_value, 0)
+
+  // Calculate Expenses
+  const expenses = accounts
+    .filter((account) => account.account_category === 'expense')
+    .reduce((sum, account) => sum + account.total_value, 0)
 })
