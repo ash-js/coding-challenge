@@ -92,4 +92,17 @@ fs.readFile('./data.json', 'utf8', (err, data) => {
   // Calculate Working Capital Ratio
   const workingCapitalRatio =
     liabilities !== 0 ? (assets / liabilities) * 100 : 0
+
+  // Format the results
+  const formattedRevenue = formatCurrency(revenue)
+  const formattedExpenses = formatCurrency(expenses)
+  const formattedGPM = formatPercentage(grossProfitMargin)
+  const formattedNPM = formatPercentage(netProfitMargin)
+  const formattedWCR = formatPercentage(workingCapitalRatio)
+
+  console.log('Revenue:', formattedRevenue)
+  console.log('Expenses:', formattedExpenses)
+  console.log('Gross Profit Margin:', formattedGPM)
+  console.log('Net Profit Margin:', formattedNPM)
+  console.log('Working Capital Ratio:', formattedWCR)
 })
